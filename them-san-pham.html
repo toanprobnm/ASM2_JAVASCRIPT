@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/hotro.js"></script>
+    <script src="js/java.js"></script>
+    <script src="js/localstorage.js"></script>
+    <script src="js/themsanpham.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        #them-san-pham {
+            width: 600px;
+            margin: auto;
+            margin-top: 50px;
+            border: 1px solid rgb(238, 77, 77);
+            border-radius: 5px;
+            box-shadow: 1px 2px 4px rgb(102, 14, 14);
+            padding: 40px;
+        }
+
+        #them-san-pham label,
+        input {
+            width: 100%;
+            display: block;
+        }
+
+        #them-san-pham label {
+            margin-top: 20px;
+        }
+
+        #them-san-pham input {
+            margin-top: 5px;
+            border: 1px solid rgb(92, 0, 0);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        #them-san-pham button {
+            border: 1px solid rgb(128, 60, 60);
+            border-radius: 5px;
+            padding: 10px 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="them-san-pham">
+        <label for="hinhAnh">Hình Ảnh</label>
+        <input type="text" id="hinhAnh">
+
+        <label for="ten">Tên</label>
+        <input type="text" id="ten">
+
+        <label for="giagoc">Gia Gốc</label>
+        <input type="text" id="giagoc">
+
+        <label for="phanTramGiamGia">Phần Trăm giảm giá(1-100%)</label>
+        <input type="text" id="phanTramGiamGia">
+
+        <label for="khuVuc">Khu vực</label>
+        <input type="text" id="khuVuc">
+
+        <button onclick="onclickThemSanPhamMoi()" class="btn">Thêm mới sản phẩm</button>
+    </div>
+    
+</body>
+</html>

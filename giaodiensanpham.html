@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện sản phẩm</title>
+    <script src="https://kit.fontawesome.com/ac350b263c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <script src="slider.js"></script>
+    <style>
+        * {
+    box-sizing:border-box
+  }
+  h2 {
+    text-align: center;
+  }
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1100px;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+  }
+  /* Ẩn các slider */
+  .mySlides {
+      display: none;
+  }
+  /* Định dạng nội dung Caption */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+   
+  /* định dạng các chấm chuyển đổi các slide */
+  .dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  /* khi được hover, active đổi màu nền */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+   
+  /* Thêm hiệu ứng khi chuyển đổi các slide */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+   
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+   
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+    </style>
+    
+	
+    
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="khung-3">
+            <div class="khung3-tong">
+                
+                    <li class="active">
+                        <a href="giaodiensanpham.html">
+                        Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Điện Thoại
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="">Iphon 11</a></li>
+                            <li><a href="">Iphone 5s</a></li>
+                            <li><a href="">Iphone 11 Pro Max</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            Máy Tính
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="">Iphon 11</a></li>
+                            <li><a href="">Iphone 5s</a></li>
+                            <li><a href="">Iphone 11 Pro Max</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            Điện
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="">Iphon 11</a></li>
+                            <li><a href="">Iphone 5s</a></li>
+                            <li><a href="">Iphone 11 Pro Max</a></li>
+                        </ul>
+                        
+                    </li>
+
+                    
+                    
+                    <div class="gio-hang">
+                        <a href="giao-dien-gio-hang.html">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+        
+    </nav>
+    
+
+    <main>
+        
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="https://didongviet.vn/pub/media/magestore/bannerslider/images/d/l/dl__690x350_copy.jpg" style="width:100%">
+            </div>
+           
+            <div class="mySlides fade">
+              <img src="https://didongviet.vn/pub/media/magestore/bannerslider/images/2/0/202004024_iphonese__690x350_copy_1.jpg" style="width:100%">
+            </div>
+           
+            <div class="mySlides fade">
+              <img src="https://didongviet.vn/pub/media/magestore/bannerslider/images/i/p/iphone_11_vna__690x350_copy_1.jpg" style="width:100%">
+            </div>
+          </div>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(0)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+          </div>
+          
+    
+        </section>
+        <section class="slider">
+        
+        <div id="hien-thi-san-pham">
+        </div>
+    
+  
+    </main>
+
+    <footer>
+        <div class="banner14">
+			<div class="banner15">
+				<div class="red">
+					<p class="red">KẾT NỐI VỚI CHÚNG TÔI</p>
+				</div>
+				<div class="red1">
+					<div class="rek1">
+						<img src="https://st.quantrimang.com/photos/image/2017/08/16/Facebook-dang-nhap-200.png" width="50px" height="41px">
+					</div>
+					<div class="rek2">
+						<img src="https://www.gstatic.com/images/branding/product/2x/photos_96dp.png" width="50px" height="41px">
+					</div>
+	
+					<div class="rek2">
+						<img src="https://coccoc.com/images/faq_ogImage.png" width="50px" height="41px">
+					</div>
+
+					
+				</div>
+				<div class="red2">
+					<p>VỀ CHÚNG TÔI</p>
+					<p>KHUYẾN MÃI</p>
+					<p>ĐIỀU KIỆN</p>
+					<p>CHÍNH SÁCH</p>
+					<p>KHÁM PHÁ</p>
+					<p>LIÊN HỆ</p>
+					<p>HỎI ĐÁP</p>
+				</div>
+				<div class="red3">
+					<p>ĐỊA CHỈ KHÁCH SẠN </p>
+					<p>TÀI LIỆU</p>
+					<p>SỰ KIỆN TIỆC CƯỚI</p>
+					
+				</div>
+				<div class="red4">
+					
+				</div>
+				<div class="red5">
+					<div class="rek3">
+						<div class="rk1">
+							<div class="lk1">
+								<p>Địa Chỉ:</p>
+							</div>
+							<div class="lk2">
+								<p>Điện thoại: +84-(0)-203-3636 555
+</p>
+							</div>
+							<div class="lk2">
+								<p>Email: info@wyndhamhalong.com
+</p>
+							</div>
+							<div class="lk2">
+								<p>https://www.wyndhamhalong.com
+</p>
+							</div>
+						</div>
+						<div class="rk2">
+							<div class="lk3">
+								<p>Email:</p>
+							</div>
+							<div class="lk4">
+								<input class="ml1" type="text" placeholder="Vui Lòng Nhập Email..." >
+
+							</div>
+							<a href="tranglienhe.html">
+								<div class="lkk4">
+								<p>Send</p>
+							</div>
+						</a>
+
+						</div>
+
+					</div>
+					<div class="rek4">
+						<div class="rt">
+							<div class="nj">
+								<p>ỨNG DỤNG ĐIỆN THOẠI</p>
+							</div>
+							<a href="index.html">
+								<div class="chplay">
+								<img src="https://bbgv.org/wp-content/uploads/2018/09/google-play-store-logo.png">
+							</div>
+							<div class="chplay">
+								<img src="https://remarkableresults.biz/wp-content/uploads/2016/06/Apple-APP-Store.png">
+							</div>
+							</a>
+						</div>
+						<div class="rek5">
+							<div class="lbv">
+								
+							</div>
+							<div class="lbv1">
+								<img src="images/lvb.jpg">
+							</div>
+						</div>
+						
+					</div>
+
+				</div>
+				
+
+			</div>
+		</div>
+		
+	</footer>
+    
+
+    
+    <script src="js/hotro.js"></script>
+    <script src="js/java.js"></script>
+    <script src="js/loadTrangChu.js"></script>
+</body>
+<script>
+    var slideIndex;
+  // KHai bào hàm hiển thị slide
+  function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+ 
+      slides[slideIndex].style.display = "block";  
+      dots[slideIndex].className += " active";
+      //chuyển đến slide tiếp theo
+      slideIndex++;
+      //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+      if (slideIndex > slides.length - 1) {
+        slideIndex = 0
+      }    
+      //tự động chuyển đổi slide sau 5s
+      setTimeout(showSlides, 3000);
+  }
+  //mặc định hiển thị slide đầu tiên 
+  showSlides(slideIndex = 0);
+ 
+ 
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+</script>
+</html>

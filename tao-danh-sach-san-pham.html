@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo danh sách sản phẩm</title>
+    
+    <script src="scrip.js"></script>
+</head>
+<body>
+    
+     <script>
+       
+        var danhSachSanPham = new Array();
+        var iphone5 = taoDoiTuongSanPham('https://fptshop.com.vn/content/images/uploaded/phone%20img/apple/apple-iphone-5s-ofic1.jpg', 'iphone 5',3000000, 20,'hanoi');
+        var iphone6 = taoDoiTuongSanPham('https://fptshop.com.vn/content/images/uploaded/phone%20img/apple/apple-iphone-5s-ofic1.jpg', 'iphone 6',400000, 20,'hanoi');
+        var iphone7 = taoDoiTuongSanPham('https://fptshop.com.vn/content/images/uploaded/phone%20img/apple/apple-iphone-5s-ofic1.jpg', 'iphone 7',500000, 20,'hanoi');
+        var iphone8 = taoDoiTuongSanPham('https://fptshop.com.vn/content/images/uploaded/phone%20img/apple/apple-iphone-5s-ofic1.jpg', 'iphone 8',600000, 20,'hanoi');
+        danhSachSanPham.push(iphone5);
+        danhSachSanPham.push(iphone6);
+        danhSachSanPham.push(iphone7);
+        danhSachSanPham.push(iphone8);
+
+
+      
+        var json = JSON.stringify(danhSachSanPham);
+        console.log(json);
+
+      
+        localStorage.setItem('danhSachSanPham', json);
+
+     
+
+        var jsonLayTuLocal =  localStorage.getItem('danhSachSanPham');
+
+        var danhSachLocal = JSON.parse(jsonLayTuLocal);
+        console.log(danhSachLocal);
+
+
+
+
+        
+    </script> 
+</body>
+</html>

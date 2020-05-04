@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Giỏ Hàng</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="js/java.js"></script>
+    <script src="js/hotro.js"></script>
+    <script src="https://kit.fontawesome.com/f20d460fd9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css">
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .img {
+            width: 100%;
+        }
+
+        input {
+            padding: 3px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #giohang {
+            border: 1px solid rgb(240, 213, 213);
+            box-shadow: 2px 2px 4px rgb(143, 58, 58);
+            padding: 20px;
+            margin: auto;
+            max-width: 1100px;
+            margin-top: 50px;
+        }
+
+        .giohang .giohangitemtieude {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: red;
+            cursor: pointer;
+        }
+
+
+        .giohang .tieude {
+            font-size: 20px;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        .item-gio-hang {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .item-gio-hang .hinhAnh img {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+        .item-gio-hang .hinhAnh {
+            width: 60px;
+        }
+
+        .item-gio-hang input {
+            width: 100%;
+        }
+
+        .item-gio-hang .hinhAnh,
+        .soLuong,
+        .tongTien,
+        .hanhh-dong {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .item-gio-hang .gia {
+            flex: 2;
+        }
+
+        .item-gio-hang .ten {
+            flex: 3;
+        }
+
+        .item-gio-hang .gia .gia-goc {
+            font-size: 12px;
+            text-decoration: line-through;
+            color: #aaa;
+        }
+
+        .gia-ban {
+            color: red;
+        }
+
+        .hanhh-dong :hover {
+            color: red;
+            cursor: pointer;
+        }
+
+
+
+        .form {
+            width: 1100px;
+            border: 1px solid rgb(236, 103, 103);
+            box-shadow: 2px 2px 4px rgb(85, 21, 21);
+            padding: 30px;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .form label , input, button {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .form input, button {
+            padding: 10px;
+            border: 1px solid rgb(187, 148, 148);
+            border-radius: 5px;
+        }
+        .form .error {
+            font-size: 12px;
+            font-style: italic;
+            color: red;
+            line-height: 12px;
+            height: 12px;
+        }
+
+        .form .muahang {
+            font-size: 20px;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: sandybrown;
+        }
+        .btn:hover {
+            background-color: rgb(240, 138, 56);
+            color: rgb(240, 213, 213);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="khung-3">
+            <div class="khung3-tong">
+                
+                    <li class="active">
+                        <a href="giaodiensanpham.html">
+                        Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Điện Thoại
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="">Iphon 11</a></li>
+                            <li><a href="">Táo Lẻ 9</a></li>
+                            <li><a href="">Táo Trắng</a></li>
+                        </ul>
+                    </li>
+                   
+                    
+                    <div class="gio-hang">
+                        <a href="giao-dien-gio-hang.html">
+                            <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart.png"/>
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+        </nav>
+    <div class="giohang" id="giohang">
+        <h1 class="tieude">Danh Sách Sản Phẩm</h1>
+
+        <div class="item-gio-hang giohangitemtieude">
+              <div class="hinhAnh"></div>
+              <p class="ten">Sản Phẩm</p>  
+              <div class="gia">Đơn Giá </div>
+              <div class="soLuong"> Số Lượng</div>
+              <p class="tongTien">Tổng Tiền</p> 
+              <div class="hanhh-dong">
+                  <p>Thao Tác</p>
+              </div>  
+      </div>  
+    </div>
+
+   
+    <footer>
+        <div class="banner14">
+			<div class="banner15">
+				<div class="red">
+					<p class="red">KẾT NỐI VỚI CHÚNG TÔI</p>
+				</div>
+				<div class="red1">
+					<div class="rek1">
+						<img src="https://st.quantrimang.com/photos/image/2017/08/16/Facebook-dang-nhap-200.png" width="50px" height="41px">
+					</div>
+					<div class="rek2">
+						<img src="https://www.gstatic.com/images/branding/product/2x/photos_96dp.png" width="50px" height="41px">
+					</div>
+	
+					<div class="rek2">
+						<img src="https://coccoc.com/images/faq_ogImage.png" width="50px" height="41px">
+					</div>
+
+					
+				</div>
+				<div class="red2">
+					<p>VỀ CHÚNG TÔI</p>
+					<p>KHUYẾN MÃI</p>
+					<p>ĐIỀU KIỆN</p>
+					<p>CHÍNH SÁCH</p>
+					<p>KHÁM PHÁ</p>
+					<p>LIÊN HỆ</p>
+					<p>HỎI ĐÁP</p>
+				</div>
+				<div class="red3">
+					<p>ĐỊA CHỈ KHÁCH SẠN </p>
+					<p>TÀI LIỆU</p>
+					<p>SỰ KIỆN TIỆC CƯỚI</p>
+					
+				</div>
+				<div class="red4">
+					
+				</div>
+				<div class="red5">
+					<div class="rek3">
+						<div class="rk1">
+							<div class="lk1">
+								<p>Địa Chỉ:</p>
+							</div>
+							<div class="lk2">
+								<p>Điện thoại: +84-(0)-203-3636 555
+</p>
+							</div>
+							<div class="lk2">
+								<p>Email: info@wyndhamhalong.com
+</p>
+							</div>
+							<div class="lk2">
+								<p>https://www.wyndhamhalong.com
+</p>
+							</div>
+						</div>
+						<div class="rk2">
+							<div class="lk3">
+								<p>Email:</p>
+							</div>
+							<div class="lk4">
+								<input class="ml1" type="text" placeholder="Vui Lòng Nhập Email..." >
+
+							</div>
+							<a href="tranglienhe.html">
+								<div class="lkk4">
+								<p>Send</p>
+							</div>
+						</a>
+
+						</div>
+
+					</div>
+					<div class="rek4">
+						<div class="rt">
+							<div class="nj">
+								<p>ỨNG DỤNG ĐIỆN THOẠI</p>
+							</div>
+							
+						</div>
+						<div class="rek5">
+							<div class="lbv">
+								
+							</div>
+							
+						</div>
+						
+					</div>
+
+				</div>
+				
+
+			</div>
+		</div>
+		
+    </footer>
+</body>
+
+<script>
+    hienThiDanhSachItemGioHang();
+
+    function hienThiDanhSachItemGioHang() {
+
+        var danhSachGioHang = loaddulieu("danhSachGioHang");
+
+        var HTML = chuyenDanhSachGioHangVaoHTML(danhSachGioHang);
+
+        var nodeGioHang = document.getElementById('giohang');
+        nodeGioHang.innerHTML =nodeGioHang.innerHTML + HTML;
+    }
+
+
+    function chuyenDanhSachGioHangVaoHTML(danhSachItemGioHang) {
+        var htmlTong = '';
+        for (var i = 0; i < danhSachItemGioHang.length; i++) {
+            html = chuyenDoiTuongGioHangVaoHTML(laySanPhamTheoId(danhSachItemGioHang[i].id), danhSachItemGioHang[i].soluong);
+            htmlTong = htmlTong + html;
+        }
+        return htmlTong;
+    }
+
+
+    function chuyenDoiTuongGioHangVaoHTML(sanPham, soluong) {
+        var html = `   <div class="item-gio-hang">  ` +
+            `  <div class="hinhAnh">  ` +
+            `  <img src="${sanPham.hinhAnh}">  ` +
+            `  </div>  ` +
+            `  <p class="ten">${sanPham.ten}</p>  ` +
+            `  <div class="gia">  ` +
+            `  <span class="gia-goc">${sanPham.giaGoc} đ</span>  ` +
+            `  <span class="gia-ban">${sanPham.tinhGiaban()} đ</span>  ` +
+            `  </div>  ` +
+            `  <input type="number" class="soLuong" value = "${soluong}" oninput="onInputSoLuong('${sanPham.id}')">  ` +
+            `  <p class="tongTien">${sanPham.tinhGiaban() * soluong}</p>  ` +
+            `  <div class="hanhh-dong" >  ` +
+            `  <i class="fas fa-trash" onclick="onClickXoaSanPham('${sanPham.id}')" ></i>  ` +
+            `  </div>  ` +
+            `  </div>  `;
+        return html;
+    }
+
+    function onClickXoaSanPham(id) {
+        let nodeCha = event.target.parentElement;
+        let nodeSanPham = nodeCha.parentElement;
+        nodeSanPham.remove();
+
+        let danhSachGioHang = loaddulieu("danhSachGioHang");
+        let vitri = danhSachGioHang.findIndex(sp=> sp.id == id);
+        danhSachGioHang.splice(vitri,1);
+        ghidulieu(danhSachGioHang,"danhSachGioHang");
+        
+    }
+    function onInputSoLuong(id) {
+        let nodeCha = event.target.parentElement;
+        let nodeTongtien = nodeCha.getElementsByClassName("tongTien")[0];
+
+        let danhSachGioHang = loaddulieu("danhSachGioHang");
+
+        let vitri = -1;
+        for (let i = 0; i < danhSachGioHang.length; i++) {
+           if(danhSachGioHang[i].id == id){
+            
+                vitri = i;
+                break;
+           }
+        }
+        let sanpham = laySanPhamTheoId(id);
+
+        if(parseInt( event.target.value) >=1){
+            
+            danhSachGioHang[vitri].soluong = parseInt( event.target.value);
+        }
+        ghidulieu(danhSachGioHang,"danhSachGioHang");
+
+
+        console.log(sanpham.tinhGiaban());
+        nodeTongtien.innerHTML = sanpham.tinhGiaban() * event.target.value;
+    }
+</script>
+
+
+</html>

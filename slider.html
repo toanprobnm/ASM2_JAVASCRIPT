@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            width: 100%;
+        }
+        .slider{
+            max-width: 1100px;
+            margin: auto;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .an{
+            display: none;
+        }
+        .slider .btn{
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 2px #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+            background-color: rgb(0, 0, 0, .5);
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            margin-top: -18px;
+            
+        }
+        .slider .truoc{
+            left: 0;
+        }
+        .slider .sau {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider" class="slider">
+        <div class="item-slider">
+            <img src="https://hpconnect.vn/wp-content/uploads/2019/09/dich-vu-ghep-anh-chuyen-nghiep-hpconnect-2.jpg">
+        </div>
+        <div class="item-slider an">
+            <img src="https://icdn.dantri.com.vn/thumb_w/640/2020/01/24/00-1579884195136.jpg">
+        </div>
+
+        <a class="btn truoc" onclick="xemAnhTruoc()">Trước</a>
+        <a class="btn sau" onclick="xemAnhSau()">Sau</a>
+    </div>
+    <script>
+        var viTriHienTai = 0;
+        var danhSachItemSlider = document.getElementsByClassName
+        ('item-slider');
+        hienThiItemSlider(viTriHienTai);
+
+        setInterval() => {
+            xemAnhSau()
+
+        }, 2000);
+        function xemAnhSau() {
+            if(viTriHienTai == danhSachItemSlider.length - 1)
+            viTriHienTai=0;
+            else{
+                viTriHienTai = viTriHienTai + 1;
+            }
+            hienThiItemSlider(viTriHienTai);
+        }
+
+
+        function hienThiItemSlider(viTri){
+            for(var i = 0; i<danhSachItemSlider.length; i++){
+                danhSachItemSlider[i].style.display = 'none';
+            }
+            danhSachItemSlider[viTri].style.display = 'block'
+        }
+    </script>
+    
+</body>
+</html>

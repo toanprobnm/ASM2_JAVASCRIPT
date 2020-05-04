@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sanPham">
+        <div class="itemSanPham" >
+            <div class="hinh-Anh">
+                <img onmouseover="HienThiZoom(event)" src="https://cdn.tgdd.vn/Files/2019/01/01/1142002/s8high_800x600.jpg" > 
+
+                <img onmouseout="AnHinhAnh(event)" src="https://cdn.tgdd.vn/Files/2019/01/01/1142002/s8high_800x600.jpg" alt="" class="zoom" >
+                <div class="zoon"></div>  
+                 </div>
+
+        </div>
+    </div>
+    <script>
+        function HienThiZoom(event){
+            console.log(event.target);
+
+            console.log(event.target);
+            var nodeCha = event.target.parentElement;
+            console.log('node cha là: ');
+            console.log(nodeCha);
+
+            var nodeZoom = nodeCha.getElementsByClassName('zoom')[0];
+            console.log('node zoom là ');
+            nodeZoom.style.display = 'block';
+
+        }
+
+        function anzoomAnh(event){
+            
+
+        }
+    </script>
+</body>
+</html>

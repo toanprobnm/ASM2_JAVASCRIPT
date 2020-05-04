@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        .form {
+            width: 30%;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            padding: 30px;
+            border-radius: 5px;
+            margin: auto;
+        }
+
+        .form label , input, button {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .form input, button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form .error {
+            font-size: 12px;
+            font-style: italic;
+            color: red;
+            line-height: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class='form'>
+        <label for='hoTen'>Họ tên:</label>
+        <input type="text" id="hoTen">
+    
+        <label id="thongBaoloiChoHoTen" for='hoTen' class="error"></label>
+
+        <label for='soDienThoai'>Số điện thoại:</label>
+        <input type="number" id="soDienThoai">
+
+        <label id="thongBaoloiChoSDT" for='SoDienThoai' class="error"></label>
+
+        <button onclick="dangKy() " class="btn"> Đăng Kí</button>
+    </div>
+    <script>
+        function dangKy() {
+
+         
+            if (kiemTraHopLeFormDangKy() == true) {
+                
+                console.log("thực hiện đăng ký");
+
+            }
+            
+        }
+        
+        function kiemTraHopLeFormDangKy() {
+            var hopLe = true;
+            
+            var nodeHoTen = document.getElementById('hoTen');
+            var nodeSoDienThoai = document.getElementById('soDienThoai');
+            var hoTen = nodeHoTen.value;
+            var soDienThoai = nodeSoDienThoai.value;
+
+            console.log("họ tên:" + hoTen);
+            console.log("số điện thoại:" + soDienThoai);
+            var nodethongBaoloiChoHoTen = document.getElementById('thongBaoloiChoHoTen');
+            nodethongBaoloiChoHoTen.innerHTML = " ";
+
+            var nodethongBaoloiChoSDT = document.getElementById('thongBaoloiChoSDT');
+            nodethongBaoloiChoSDT.innerHTML = " ";
+            
+            if (hoTen == null || hoTen.length <= 0) {
+                nodethongBaoloiChoHoTen.innerHTML = "Họ tên ko được để trống !";
+
+                hopLe = false;
+
+            }
+            if (soDienThoai == null || soDienThoai.length < 10 || soDienThoai.length > 11) {
+                nodethongBaoloiChoSDT.innerHTML = "Số điện thoại ko được để trống !";
+                hopLe = false;
+
+            }
+
+            return hopLe;
+        }
+    </script>
+</body>
+
+</html>
